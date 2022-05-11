@@ -19,7 +19,7 @@ resource "aws_internet_gateway" "kubernetes_vpc_igw" {
 }
 
 # Subenets in demo_vpc
-resource "aws_subnet" "subnets" {
+resource "aws_subnet" "kubernetes_subnets" {
   count                   = length(var.subnets_cidr)
   vpc_id                  = aws_vpc.kubernetes.id
   cidr_block              = element(var.subnets_cidr, count.index)
