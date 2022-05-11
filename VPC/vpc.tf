@@ -3,7 +3,7 @@ provider "aws" {
   region = "us-east-1d"
 }
 # VPC
-resource "aws_vpc" "vpc" {
+resource "aws_vpc" "kubernetes" {
   cidr_block = var.vpc_cidr
   #enable_dns_hostnames = true
   tags = {
