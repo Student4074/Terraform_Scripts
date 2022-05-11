@@ -1,8 +1,8 @@
 # Security Group All Traffic Attached To Instnaces In instances.tf
-resource "aws_security_group" "demo_sg" {
+resource "aws_security_group" "kubernetes_sg" {
   name        = "Allow_All_Ports"
   description = "Allow All Ports All Protocals"
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = aws_vpc.kubernetes.id
   ingress {
     from_port   = 0
     to_port     = 0
