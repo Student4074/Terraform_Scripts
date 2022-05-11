@@ -1,9 +1,9 @@
-/* @Mithun Technologies
+/* @Indra
  Demo VPC varaibles file. Make sure you replace key_name value
  with your key name which  you have in given aws_region.
 */
 variable "aws_region" {
-  default = "ap-south-1"
+  default = "us-east-1d"
 }
 variable "vpc_cidr" {
   default = "172.0.0.0/24"
@@ -14,14 +14,17 @@ variable "subnets_cidr" {
 }
 variable "availability_zones" {
   type    = list(string)
-  default = ["ap-south-1a", "ap-south-1b"]
+  default = ["us-east-1d", "us-east-1c"]
 }
-variable "ubuntuami" {
-  default = "ami-0b44050b2d893d5f7"
-}
-variable "redhatami" {
-  default = "ami-052c08d70def0ac62"
+variable "kubernetes_ami" {
+  default = "ami-0c4f7023847b90238"
 }
 variable "key_name" {
-  default = "devops"
+  default = "DevopsBatchMithun"
+}
+variable "master_instance_type" {
+default = "t2.medium"
+}
+variable "worker_instance_type" {
+default = "t2.micro"
 }
